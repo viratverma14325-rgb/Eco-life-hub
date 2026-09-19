@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoLife Hub | Small Actions. Big Change.</title>
+    <meta name="description" content="Empowering you to live sustainably. Calculate your carbon footprint, explore practical eco tips, track your daily challenges, and master recycling.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="scroll-progress"></div>
+
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <i class="fa-solid fa-seedling"></i> EcoLife <span>Hub</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#tips" class="nav-link">Eco Tips</a></li>
+                <li><a href="#calculator" class="nav-link">Calculator</a></li>
+                <li><a href="#recycling" class="nav-link">Recycling</a></li>
+                <li><a href="#challenges" class="nav-link">Challenges</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle light or dark theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <div class="hamburger" aria-label="Menu Toggle" role="button" tabindex="0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section id="home" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="fade-in">Small Actions.<br><span class="gradient-text">Big Change.</span></h1>
+                <p class="fade-in delays-1">Protecting our planet starts with the choices we make every single day. Discover easy, practical ways to reduce your waste, save energy, and build a beautiful, sustainable future.</p>
+                <div class="hero-btns fade-in delays-2">
+                    <a href="#calculator" class="btn btn-primary">Get Started</a>
+                    <a href="#tips" class="btn btn-secondary">Explore Tips</a>
+                </div>
+            </div>
+            <div class="stats-panel glassmorphism">
+                <div class="stat-item">
+                    <h3 class="stat-number" data-target="14250">0</h3>
+                    <p>Tons of CO2 Saved</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number" data-target="88400">0</h3>
+                    <p>Trees Planted</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number" data-target="6500">0</h3>
+                    <p>Active Members</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section container">
+            <div class="section-header">
+                <h2>Why EcoLife Hub?</h2>
+                <p>We combine modern, simple technology with environmental science to make green living intuitive and achievable for everyone.</p>
+            </div>
+            <div class="grid-3">
+                <div class="feature-card glassmorphism">
+                    <i class="fa-solid fa-chart-line feature-icon"></i>
+                    <h3>Track Your Progress</h3>
+                    <p>Easily calculate and monitor your carbon footprint with our interactive tools, setting achievable goals for green living.</p>
+                </div>
+                <div class="feature-card glassmorphism">
+                    <i class="fa-solid fa-bolt feature-icon"></i>
+                    <h3>Save Energy Easily</h3>
+                    <p>Learn simple, practical steps to optimize your home energy use and transition smoothly to sustainable power.</p>
+                </div>
+                <div class="feature-card glassmorphism">
+                    <i class="fa-solid fa-earth-americas feature-icon"></i>
+                    <h3>Join a Global Movement</h3>
+                    <p>Every single habit you change contributes directly to verified global environmental restoration efforts.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tips" class="tips-section container section-padding">
+            <div class="section-header">
+                <h2>Daily Eco Tips</h2>
+                <p>Simple, effective sustainability habits designed to fit seamlessly into your modern busy lifestyle.</p>
+            </div>
+            
+            <div class="filter-wrapper">
+                <div class="search-box glassmorphism">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="tips-search" placeholder="Search eco tips...">
+                </div>
+                <div class="filter-tags">
+                    <button class="filter-btn active" data-filter="all">All Tips</button>
+                    <button class="filter-btn" data-filter="energy">Energy</button>
+                    <button class="filter-btn" data-filter="waste">Waste</button>
+                    <button class="filter-btn" data-filter="water">Water</button>
+                </div>
+            </div>
+
+            <div class="grid-3 tips-container">
+                <div class="tip-card glassmorphism" data-category="energy">
+                    <div class="tip-header">
+                        <i class="fa-solid fa-plug-circle-xmark tip-icon"></i>
+                        <span class="tag">Energy</span>
+                    </div>
+                    <h3>Unplug Idle Electronics</h3>
+                    <p>Unplug home appliances or use smart power strips to stop standby power loss, saving up to 10% on your monthly electricity bill.</p>
+                </div>
+                <div class="tip-card glassmorphism" data-category="waste">
+                    <div class="tip-header">
+                        <i class="fa-solid fa-bag-shopping tip-icon"></i>
+                        <span class="tag">Waste</span>
+                    </div>
+                    <h3>Say No to Single-Use</h3>
+                    <p>Bring reusable bags to the market and prioritize products packaged in highly recyclable glass or aluminum alternatives.</p>
+                </div>
+                <div class="tip-card glassmorphism" data-category="water">
+                    <div class="tip-header">
+                        <i class="fa-solid fa-droplet tip-icon"></i>
+                        <span class="tag">Water</span>
+                    </div>
+                    <h3>Install Faucet Aerators</h3>
+                    <p>Fit standard home faucets with inexpensive, high-efficiency aerators to reduce household water consumption by up to 30%.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="calculator" class="calc-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Calculate Your Carbon Footprint</h2>
+                    <p>Discover your personal environmental impact by evaluating your household energy and daily travel habits.</p>
+                </div>
+                
+                <div class="calc-grid glassmorphism">
+                    <form id="footprint-form" class="calc-form">
+                        <div class="form-group">
+                            <label for="calc-electricity"><i class="fa-solid fa-bolt"></i> Monthly Electricity (kWh)</label>
+                            <input type="number" id="calc-electricity" min="0" placeholder="e.g. 350" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="calc-transport"><i class="fa-solid fa-car"></i> Weekly Travel distance (Miles)</label>
+                            <input type="number" id="calc-transport" min="0" placeholder="e.g. 120" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="calc-diet"><i class="fa-solid fa-utensils"></i> Your Typical Diet</label>
+                            <select id="calc-diet" required>
+                                <option value="heavy-meat">Frequent Meat & Dairy</option>
+                                <option value="balanced" selected>Balanced Omnivore</option>
+                                <option value="vegetarian">Vegetarian</option>
+                                <option value="vegan">Plant-Based / Vegan</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Calculate My Footprint</button>
+                    </form>
+
+                    <div class="calc-results">
+                        <h3>Your Annual Footprint</h3>
+                        <div class="result-display">
+                            <span id="score-metric">0.0</span>
+                            <small>Tons of CO₂ / Year</small>
+                        </div>
+                        <div class="score-badge-wrapper">
+                            <span>Your Eco Standing: </span>
+                            <span id="score-badge" class="badge-neutral">Awaiting Input</span>
+                        </div>
+                        <div class="insights-box">
+                            <h4>Personalized Tips for You</h4>
+                            <p id="calc-suggestion">Fill in the fields on the left to calculate your score and receive custom recommendations to reduce your impact.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="recycling" class="recycling-section container section-padding">
+            <div class="section-header">
+                <h2>Interactive Recycling Directory</h2>
+                <p>Quickly search common materials to learn exactly how and where to recycle them in your community.</p>
+            </div>
+            
+            <div class="recycle-search-box glassmorphism">
+                <i class="fa-solid fa-box-open"></i>
+                <input type="text" id="recycle-search" placeholder="Search items (e.g., Plastic Bottles, Cardboard, Batteries)...">
+            </div>
+
+            <div class="grid-4 recycle-container">
+                <div class="recycle-card glassmorphism" data-item="plastic bottles jugs packaging">
+                    <span class="recycle-code">PETE 1 / HDPE 2</span>
+                    <h3>Rigid Plastics</h3>
+                    <p class="recycle-status status-yes"><i class="fa-solid fa-circle-check"></i> Highly Recyclable</p>
+                    <p class="recycle-desc">Rinse thoroughly, flatten to save space, and put back original plastic caps before placing in your curbside bin.</p>
+                </div>
+                <div class="recycle-card glassmorphism" data-item="cardboard paper boxes newspapers">
+                    <span class="recycle-code">PAP 20</span>
+                    <h3>Paper & Cardboard</h3>
+                    <p class="recycle-status status-yes"><i class="fa-solid fa-circle-check"></i> Highly Recyclable</p>
+                    <p class="recycle-desc">Flatten all boxes completely. Keep them completely dry and remove any heavy grease, tape, or plastic lining.</p>
+                </div>
+                <div class="recycle-card glassmorphism" data-item="glass bottles jars cups">
+                    <span class="recycle-code">GL 70</span>
+                    <h3>Glass Containers</h3>
+                    <p class="recycle-status status-yes"><i class="fa-solid fa-circle-check"></i> Infinitely Recyclable</p>
+                    <p class="recycle-desc">Wash thoroughly. Most local centers accept clear, green, and amber glass jars and bottles. Do not mix with window glass.</p>
+                </div>
+                <div class="recycle-card glassmorphism" data-item="batteries phones laptops electronics chargers">
+                    <span class="recycle-code">E-WASTE</span>
+                    <h3>Electronics & Batteries</h3>
+                    <p class="recycle-status status-no"><i class="fa-solid fa-circle-xmark"></i> Safe Drop-off Only</p>
+                    <p class="recycle-desc">Never throw electronics in standard trash. Please bring them to a local certified electronic waste collection center.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="challenges" class="challenges-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Eco Challenges</h2>
+                    <p>Turn clean habits into fun milestones. Complete daily challenges, earn points, and collect badges.</p>
+                </div>
+
+                <div class="challenge-dashboard glassmorphism">
+                    <div class="dashboard-header">
+                        <div class="progress-info">
+                            <h3>Your Achievements</h3>
+                            <p>Global Score Tracker</p>
+                        </div>
+                        <div class="badge-gallery">
+                            <i class="fa-solid fa-award challenge-badge locked" id="badge-1" title="Zero Waste Hero"></i>
+                            <i class="fa-solid fa-cloud-sun challenge-badge locked" id="badge-2" title="Carbon Neutral Champion"></i>
+                            <i class="fa-solid fa-faucet-drip challenge-badge locked" id="badge-3" title="Water Conservationist"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="challenges-list">
+                        <div class="challenge-item">
+                            <div class="challenge-details">
+                                <h4><i class="fa-solid fa-leaf"></i> Say No to Single-Use Plastic</h4>
+                                <p>Avoid purchasing or using any disposable plastic cups, bags, straws, or bottles for 48 hours.</p>
+                            </div>
+                            <button class="btn btn-action challenge-btn" data-id="1" data-xp="150">Complete (+150 pts)</button>
+                        </div>
+                        
+                        <div class="challenge-item">
+                            <div class="challenge-details">
+                                <h4><i class="fa-solid fa-bicycle"></i> Carbon-Free Travel</h4>
+                                <p>Commute by bicycle, walking, public transit, or carpool today instead of driving alone.</p>
+                            </div>
+                            <button class="btn btn-action challenge-btn" data-id="2" data-xp="200">Complete (+200 pts)</button>
+                        </div>
+
+                        <div class="challenge-item">
+                            <div class="challenge-details">
+                                <h4><i class="fa-solid fa-utensils"></i> All Plant-Based Day</h4>
+                                <p>Enjoy only delicious plant-based meals today to significantly lower your personal food emissions.</p>
+                            </div>
+                            <button class="btn btn-action challenge-btn" data-id="3" data-xp="100">Complete (+100 pts)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="blog-section container section-padding">
+            <div class="section-header">
+                <h2>Latest Articles & Insights</h2>
+                <p>Read our newest guides, environmental success stories, and practical science-backed tips for living a green life.</p>
+            </div>
+
+            <div class="featured-article-card glassmorphism">
+                <div class="featured-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=80" alt="Solar arrays under blue sky" class="lazy-image">
+                </div>
+                <div class="featured-content">
+                    <div class="blog-meta">
+                        <span class="tag">Clean Energy</span>
+                        <span class="read-time"><i class="fa-regular fa-clock"></i> 8 Min Read</span>
+                    </div>
+                    <h3>How Modern Home Solar Systems Power the Future</h3>
+                    <p>A simple, comprehensive look at how communities are utilizing clean microgrids and residential solar arrays to decrease energy bills and construct resilient neighborhoods.</p>
+                    <a href="#blog" class="read-more-link">Read Full Guide <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="grid-3 regular-blog-container">
+                <div class="blog-card glassmorphism">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80" alt="Green plants growing out of compost soil" class="lazy-image">
+                    <div class="blog-card-body">
+                        <div class="blog-meta">
+                            <span class="tag">Zero Waste</span>
+                            <span class="read-time"><i class="fa-regular fa-clock"></i> 5 Min Read</span>
+                        </div>
+                        <h3>The Real Truth About Plastic Recycling</h3>
+                        <p>Understanding which plastic materials actually get recycled and how you can avoid sorting mistakes to ensure your waste is properly processed.</p>
+                    </div>
+                </div>
+
+                <div class="blog-card glassmorphism">
+                    <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?auto=format&fit=crop&w=600&q=80" alt="Fresh vertical garden vegetables growing indoors" class="lazy-image">
+                    <div class="blog-card-body">
+                        <div class="blog-meta">
+                            <span class="tag">Sustainable Food</span>
+                            <span class="read-time"><i class="fa-regular fa-clock"></i> 6 Min Read</span>
+                        </div>
+                        <h3>A Beginner's Guide to Backyard Gardening</h3>
+                        <p>Learn how to grow your own herbs, fruits, and vegetables at home to save money and cut down on commercial shipping emissions.</p>
+                    </div>
+                </div>
+
+                <div class="blog-card glassmorphism">
+                    <img src="https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=600&q=80" alt="Bright energy efficient home interior" class="lazy-image">
+                    <div class="blog-card-body">
+                        <div class="blog-meta">
+                            <span class="tag">Eco Living</span>
+                            <span class="read-time"><i class="fa-regular fa-clock"></i> 4 Min Read</span>
+                        </div>
+                        <h3>Simple Steps to Insulate Your Home</h3>
+                        <p>Locate drafty spots around doors and windows to keep warm air inside, reducing your winter heating bills and energy demand.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Our Community Says</h2>
+                    <p>See how thousands of green homeowners, nature lovers, and everyday citizens are making a difference with us.</p>
+                </div>
+                <div class="grid-3">
+                    <div class="testimonial-card glassmorphism">
+                        <p class="quote">"The carbon footprint tool showed me exactly where I was wasting power. Unplugging idle electronics saved me significant costs on my energy bills this year!"</p>
+                        <div class="user-profile">
+                            <div class="user-info">
+                                <strong>Julian Vance</strong>
+                                <span>Homeowner & Solar Enthusiast</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glassmorphism">
+                        <p class="quote">"The recycling guide completely cleared up my confusion on sorting containers. Now I recycle with confidence knowing my items actually get processed."</p>
+                        <div class="user-profile">
+                            <div class="user-info">
+                                <strong>Helena Rostova</strong>
+                                <span>Community Garden Coordinator</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glassmorphism">
+                        <p class="quote">"Tracking challenges made saving resources fun. It motivated my whole family to start walking to the grocery store on weekends!"</p>
+                        <div class="user-profile">
+                            <div class="user-info">
+                                <strong>Marcus Sterling</strong>
+                                <span>High School Educator</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-section container">
+            <div class="newsletter-wrapper glassmorphism">
+                <h2>Join Our Green Newsletter</h2>
+                <p>Get practical monthly guides, sustainability inspiration, and local environmental tips sent directly to your inbox. No spam, ever.</p>
+                <form id="newsletter-form" class="newsletter-inputs">
+                    <input type="email" placeholder="Enter your email address" required aria-label="Email Field">
+                    <button type="submit" class="btn btn-primary">Subscribe Now</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section container section-padding">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Have a question, feedback, or want to collaborate with us? Drop us a message, and we will get back to you shortly.</p>
+            </div>
+
+            <div class="contact-grid">
+                <form id="contact-form" class="contact-form-ui glassmorphism">
+                    <div class="form-group">
+                        <label for="contact-name">Your Name</label>
+                        <input type="text" id="contact-name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email Address</label>
+                        <input type="email" id="contact-email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-msg">Your Message</label>
+                        <textarea id="contact-msg" rows="5" placeholder="Tell us how we can help..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+
+                <div class="contact-info-panel">
+                    <div class="faq-container glassmorphism">
+                        <h3>Frequently Asked Questions</h3>
+                        <div class="faq-item">
+                            <div class="faq-trigger">How accurate is the carbon calculator? <i class="fa-solid fa-chevron-down"></i></div>
+                            <div class="faq-content"><p>Our calculator uses greenhouse gas tracking guidelines to estimate emissions based on standard household averages.</p></div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-trigger">Can I share these guides with my school or team? <i class="fa-solid fa-chevron-down"></i></div>
+                            <div class="faq-content"><p>Absolutely! All our tips, articles, and directories are free to share under open public creative licenses.</p></div>
+                        </div>
+                    </div>
+
+                    <div class="map-placeholder-ui glassmorphism">
+                        <div class="map-overlay">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <h4>Our Main Office</h4>
+                            <p>Presidio Sustainability Quad, San Francisco, CA</p>
+                        </div>
+                        <div class="simulated-vector-grid"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-ui">
+        <div class="container footer-grid">
+            <div class="footer-brand-side">
+                <a href="#home" class="logo"><i class="fa-solid fa-seedling"></i> EcoLife <span>Hub</span></a>
+                <p>We are a community-driven organization dedicated to making sustainable green living easy, approachable, and actionable for households worldwide.</p>
+                <div class="social-links-row">
+                    <a href="#home" aria-label="Github Channel"><i class="fa-brands fa-github"></i></a>
+                    <a href="#home" aria-label="X Account"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#home" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-links-column">
+                <h4>Explore</h4>
+                <a href="#tips">Eco Habits & Tips</a>
+                <a href="#calculator">Carbon Calculator</a>
+                <a href="#recycling">Recycling Guides</a>
+                <a href="#challenges">Active Challenges</a>
+            </div>
+            <div class="footer-links-column">
+                <h4>About Us</h4>
+                <a href="#home">Our Mission</a>
+                <a href="#home">Community Projects</a>
+                <a href="#home">Privacy Policy</a>
+                <a href="#home">Terms of Service</a>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 EcoLife Hub. Inspiring everyday environmental stewardship globally.</p>
+        </div>
+    
+<section class="ecolife-contact-details" aria-label="Contact Ecolife Hub"
+         style="margin:20px 0;text-align:center;">
+  <p>📧 <a href="mailto:viratverma14325@gmail.com">viratverma14325@gmail.com</a></p>
+  <p>📱 <a href="https://wa.me/918601592195" target="_blank" rel="noopener">WhatsApp: 8601592195</a></p>
+  <p>📍 Lucknow, Uttar Pradesh</p>
+  <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Lucknow%2C%20Uttar%20Pradesh"
+        target="_blank" rel="noopener">View Location on Google Maps</a></p>
+</section>
+
+<div class="ecolife-creator-credit" style="text-align:center;margin:12px 0;font-size:14px;">
+  Created &amp; maintained by <strong>Virat Verma</strong>
+</div>
+</footer>
+
+    <button id="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+</html>
